@@ -1,0 +1,11 @@
+.left-meter {
+    transform: scaleX(-1);
+}
+
+.right-meter {
+    transform: scaleX(1);
+}
+
+.meters {
+    height: 10vh;
+}

@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-image: linear-gradient(rgb(206, 122, 136), rgb(110, 47, 47));
+}
+
+.full {
+    width: 100vw;
+    height: 10vh;
+    text-align: center;
+    border: solid 5px aliceblue;
+}
+
+.options {
+    display: flex;
+}
+
+app-opt-one, app-opt-two {
+    border: solid 1px aliceblue;
+    width: 50vw;
+    height: 70vh;
+}
+
+meter {
+    width: 10%;
+}
