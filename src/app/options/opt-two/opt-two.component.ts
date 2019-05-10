@@ -1,15 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
+import { WeightLogicService } from 'src/app/services/weight-logic.service';
 
 @Component({
   selector: 'app-opt-two',
   templateUrl: './opt-two.component.html',
   styleUrls: ['./opt-two.component.css']
 })
-export class OptTwoComponent implements OnInit {
+export class OptTwoComponent implements OnInit, DoCheck {
+  private options: string[];
+  rightWeight: number;
 
-  constructor() { }
+  constructor(
+    private weightServe: WeightLogicService
+  ) { }
 
   ngOnInit() {
+    this.options = ['yee', 'woo', 'good'];
+    this.addItem();
   }
 
+  ngDoCheck() {
+    //
+  }
+
+  addItem() {
+    this.options.push('');
+    this.rightWeight = this.options.length;
+    this.weightServe.addRight(this.rightWeight);
+  }
 }

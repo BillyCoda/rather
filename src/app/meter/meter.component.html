@@ -1,4 +1,6 @@
-<div class="full">
-  <meter class="meters left-meter" value="50" max="100"></meter>
-  <meter class="meters right-meter" value="50" max="100"></meter>
+<div class="full meter-container">
+  <div class="meter" [ngStyle]="{ 'transform':positionStyle }"></div>
+  <div class="measure"></div>
 </div>
+<!-- <meter class="meters left-meter" value="{{ leftValue }}" min="0" low="15" high="60" optimum="90" max="100"></meter>
+  <meter class="meters right-meter" value="{{ rightValue }}" min="0" low="15" high="60" optimum="90" max="100"></meter> -->

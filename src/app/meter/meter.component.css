@@ -1,11 +1,24 @@
-.left-meter {
-    transform: scaleX(-1);
+.meter-container {
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+  background-color: rgb(80, 80, 80);
 }
 
-.right-meter {
-    transform: scaleX(1);
+.meter {
+  border: solid 1px black;
+  width: 1px;
+  background-color: black;
+  height: 10vh;
+  margin: auto;
+  z-index: 3;
 }
 
-.meters {
-    height: 10vh;
+.measure {
+  bottom: 0;
+  position: fixed;
+  height: 10vh;
+  width: 100vw;
+  z-index: -1;
+  background-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.219) 1%, rgba(104, 0, 0, 0.5) 2%, rgba(172, 0, 0, 0.5) 10%, rgba(175, 175, 0, 0.5) 30%, rgba(43, 168, 43, 0.5) 40%, rgba(22, 129, 22, 0.5) 80%, rgba(17, 17, 121, 0.5) 100%);
 }
