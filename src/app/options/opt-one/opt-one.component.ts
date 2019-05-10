@@ -9,6 +9,7 @@ import { WeightLogicService } from 'src/app/services/weight-logic.service';
 export class OptOneComponent implements OnInit, DoCheck {
   private options: string[];
   leftWeight: number;
+  newItem: string;
 
   constructor(
     private weightServe: WeightLogicService
@@ -24,7 +25,7 @@ export class OptOneComponent implements OnInit, DoCheck {
   }
 
   addItem() {
-    this.options.push('');
+    this.options.push(this.newItem);
     this.leftWeight = this.options.length;
     this.weightServe.addLeft(this.leftWeight);
   }

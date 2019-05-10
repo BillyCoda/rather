@@ -2,7 +2,7 @@ body {
     padding: 0;
     margin: 0;
     overflow: hidden;
-    background-image: linear-gradient(rgb(206, 122, 136), rgb(110, 47, 47));
+    background-image: linear-gradient(rgb(206, 122, 136), rgb(150, 2, 2), #444);
 }
 
 .full {
@@ -18,8 +18,8 @@ body {
 app-opt-one, app-opt-two {
     width: 50vw;
     height: 70vh;
-    border-right: solid 1px black;
-    border-left: solid 1px black; 
+    border-right: solid 2px black;
+    border-left: solid 2px black; 
 }
 
 meter {
