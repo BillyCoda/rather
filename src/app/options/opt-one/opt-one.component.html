@@ -1,4 +1,11 @@
 <div class="option-container-one">
+  <div class="add" *ngIf="!leftOptSubmitted">
+    <input type="text" (keydown.enter)="submitLeftOpt()" [(ngModel)]="leftOpt" />
+    <button class="add-item" (click)="submitLeftOpt()">Add Item</button>
+  </div>
+  <div class="add left-opt" *ngIf="leftOptSubmitted">
+    {{ leftOpt }}
+  </div>
   <ul *ngFor="let item of options">
     <li>{{ item }}</li>
   </ul>

@@ -7,6 +7,7 @@ export class WeightLogicService {
   weightedValue: number;
   leftValue: number;
   rightValue: number;
+  // additions need to be actually weighted and balanced
 
   constructor() {
     this.avgMeter();

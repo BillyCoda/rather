@@ -2,7 +2,7 @@ body {
     padding: 0;
     margin: 0;
     overflow: hidden;
-    background-image: linear-gradient(rgb(179, 98, 136), rgb(111, 55, 133), rgb(76, 49, 85));
+    background-image: linear-gradient(rgb(202, 154, 177), rgb(162, 141, 170), rgb(129, 112, 134));
 }
 
 .full {
@@ -42,7 +42,7 @@ input {
 .big-question {
     font-size: 2.4rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: pink;
+    color: rgb(29, 14, 25);
     font-weight: bold;
 }
 
