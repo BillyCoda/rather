@@ -1,3 +1,9 @@
 <div class="full">
-  <input type="text" class="question-input" />
+  <div class="wrapQuestion" *ngIf="!questionSubmitted">
+    <input type="text" class="question-input" (keydown.enter)="submitQuestion()" [(ngModel)]="question"/>
+    <button class="question-btn" (click)="submitQuestion()">Submit</button>
+  </div>
+  <div class="big-question" *ngIf="questionSubmitted">
+    {{ questionBig }}
+  </div>
 </div>

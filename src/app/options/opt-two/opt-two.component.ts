@@ -9,13 +9,14 @@ import { WeightLogicService } from 'src/app/services/weight-logic.service';
 export class OptTwoComponent implements OnInit, DoCheck {
   private options: string[];
   rightWeight: number;
+  newItem: string;
 
   constructor(
     private weightServe: WeightLogicService
   ) { }
 
   ngOnInit() {
-    this.options = ['yee', 'woo', 'good'];
+    this.options = [];
     this.addItem();
   }
 
@@ -24,8 +25,10 @@ export class OptTwoComponent implements OnInit, DoCheck {
   }
 
   addItem() {
-    this.options.push('');
-    this.rightWeight = this.options.length;
-    this.weightServe.addRight(this.rightWeight);
+    if (!!this.newItem) {
+      this.options.push(this.newItem);
+      this.rightWeight = this.options.length;
+      this.weightServe.addRight(this.rightWeight);
+    }
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, DoCheck } from '@angular/core';
+import { Component, DoCheck, OnInit } from '@angular/core';
 import { WeightLogicService } from '../services/weight-logic.service';
 
 @Component({
@@ -10,16 +10,23 @@ export class MeterComponent implements OnInit, DoCheck {
   position: number;
   positionStyle: string;
 
-  constructor(
-    private weightServe: WeightLogicService
-  ) { }
+  constructor(private weightServe: WeightLogicService) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   ngDoCheck() {
-    this.position = this.weightServe.weightedValue;
-    this.positionStyle = 'translateX(' + this.position + 'em)';
-  }
+    let offset = this.position;
+    offset = this.weightServe.weightedValue;
+    console.log(offset);
 
+    if (offset < 50 && offset > -50) {
+      this.positionStyle = 'translateX(' + offset + 'rem)';
+    } else if (offset >= 50) {
+      this.positionStyle = 'translateX(59.5rem)';
+      // glo up right
+    } else  {
+      this.positionStyle = 'translateX(-59.5rem)';
+      // glo up left
+    }
+  }
 }

@@ -1,12 +1,12 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { QuestionComponent } from './question/question.component';
+import { MeterComponent } from './meter/meter.component';
 import { OptOneComponent } from './options/opt-one/opt-one.component';
 import { OptTwoComponent } from './options/opt-two/opt-two.component';
-import { MeterComponent } from './meter/meter.component';
+import { QuestionComponent } from './question/question.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +18,7 @@ import { MeterComponent } from './meter/meter.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

@@ -2,7 +2,7 @@ body {
     padding: 0;
     margin: 0;
     overflow: hidden;
-    background-image: linear-gradient(rgb(206, 122, 136), rgb(150, 2, 2), #444);
+    background-image: linear-gradient(rgb(179, 98, 136), rgb(111, 55, 133), rgb(76, 49, 85));
 }
 
 .full {
@@ -16,12 +16,50 @@ body {
 }
 
 app-opt-one, app-opt-two {
+    font-size: 1.5em;
     width: 50vw;
     height: 70vh;
-    border-right: solid 2px black;
-    border-left: solid 2px black; 
 }
 
-meter {
-    width: 10%;
+input, button {
+    padding: .5rem;
+    border: solid 1px aliceblue;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px 0 36px;
+}
+
+button {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+input {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.big-question {
+    font-size: 2.4rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: pink;
+    font-weight: bold;
+}
+
+.option-container-one {
+    border-right: solid 2px black;
+    overflow: auto;
+    direction: rtl;
+    height: 100%;
+}
+
+.option-container-two {
+    overflow: auto;
+    border-left: solid 2px black;
+    height: 100%;
+}
+
+.add {
+    text-align: center;
+    direction: ltr;
 }

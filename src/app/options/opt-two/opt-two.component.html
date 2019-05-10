@@ -1,6 +1,9 @@
-<div class="option-container">
+<div class="option-container-two">
   <ul *ngFor="let item of options">
     <li>{{ item }}</li>
   </ul>
-  <button class="add-item" (click)="addItem()">Add Item</button>
+  <div class="add">
+    <input type="text" (keydown.enter)="addItem()" [(ngModel)]="newItem" />
+    <button class="add-item" (click)="addItem()">Add Item</button>
+  </div>
 </div>
